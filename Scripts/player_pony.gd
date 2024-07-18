@@ -13,8 +13,6 @@ and probably both should extend some parent script
 var linear_vel = Vector2()
 var run_direction = Vector2.DOWN
 
-signal health_changed(current_hp)
-
 @export var facing = "right" # (String, "up", "down", "left", "right")
 
 
