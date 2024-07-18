@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cns7rui6lpif6"
-path="res://.godot/imported/Horse_paint_back_rearing.png-e6479006bd1906dbf2fed47410c8e6a2.ctex"
+path="res://.godot/imported/Horse_paint_back_rearing.png-b822ec8e25db1a0d62563170861d8206.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HorseAssets/Horse_Sprite_Asset/Horses_Rearing/Horses_no_equipment/Horse_paint_back_rearing.png"
-dest_files=["res://.godot/imported/Horse_paint_back_rearing.png-e6479006bd1906dbf2fed47410c8e6a2.ctex"]
+source_file="res://Assets/HorseAssets/Horses_Rearing/Horse_paint_back_rearing.png"
+dest_files=["res://.godot/imported/Horse_paint_back_rearing.png-b822ec8e25db1a0d62563170861d8206.ctex"]
 
 [params]
 

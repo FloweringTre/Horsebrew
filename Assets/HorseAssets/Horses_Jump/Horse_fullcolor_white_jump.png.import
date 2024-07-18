@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqc5wu1hgiu63"
-path="res://.godot/imported/Horse_fullcolor_white_jump.png-371b296aa4a1297309310d4a27952a2c.ctex"
+path="res://.godot/imported/Horse_fullcolor_white_jump.png-e0158a595a8a463a321aa30ccf268133.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HorseAssets/Horse_Sprite_Asset/Horses_Jump/Horses_no_equipment/Horse_fullcolor_white_jump.png"
-dest_files=["res://.godot/imported/Horse_fullcolor_white_jump.png-371b296aa4a1297309310d4a27952a2c.ctex"]
+source_file="res://Assets/HorseAssets/Horses_Jump/Horse_fullcolor_white_jump.png"
+dest_files=["res://.godot/imported/Horse_fullcolor_white_jump.png-e0158a595a8a463a321aa30ccf268133.ctex"]
 
 [params]
 
