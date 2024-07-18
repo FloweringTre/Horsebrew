@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bee53c4eufu4e"]
+
+[ext_resource type="Texture2D" uid="uid://cavjvcqk3gwq7" path="res://Assets/Pet Cats Pack/Cat-2/Cat-2-Idle.png" id="1_kekdi"]
+[ext_resource type="Script" path="res://Scripts/witch_kitty.gd" id="1_swiog"]
+
+[sub_resource type="Animation" id="Animation_wnsvs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_tlfpw"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0f0vj"]
+_data = {
+"RESET": SubResource("Animation_wnsvs"),
+"idle": SubResource("Animation_tlfpw")
+}
+
+[node name="WitchKitty" type="Node2D"]
+script = ExtResource("1_swiog")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kekdi")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0f0vj")
+}
