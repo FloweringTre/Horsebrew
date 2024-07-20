@@ -1,11 +1,5 @@
 extends CharacterBody2D
 
-"""
-This implements a very rudimentary state machine. There are better implementations
-in the AssetLib if you want to make something more complex. Also it shares code with Enemy.gd
-and probably both should extend some parent script
-"""
-
 @export var WALK_SPEED: int = 50 # pixels per second
 @export var TROT_SPEED: int = 100 # pixels per second
 @export var GALLOP_SPEED: int = 150 # pixels per second
@@ -26,7 +20,9 @@ var state = STATE_IDLE
 
 # Move the player to the corresponding spawnpoint, if any and connect to the dialog system
 
-
+func _ready():
+	Dialogic.signal_event.connect(DialogicSignalEvent)
+	#connects to dialogic signals
 
 func _physics_process(_delta):
 	
@@ -157,12 +153,14 @@ func _physics_process(_delta):
 		$AnimationPlayer.play(anim)
 	pass
 
-
-func _on_dialog_started():
-	state = STATE_BLOCKED
-
-func _on_dialog_ended():
-	state = STATE_IDLE
+func DialogicSignalEvent(argument:String):
+	if argument == "DialogueStart":
+		state = STATE_BLOCKED
+		print("PAUSETHEPONY")
+	if argument == "DialogueEnd":
+		state = STATE_IDLE
+		print("#LETSGOFASSTTTTT")
+	pass
 
 
 ## HELPER FUNCS
