@@ -20350,13 +20350,13 @@ pattern_0 = SubResource("TileMapPattern_58j12")
 script = ExtResource("1_6pkii")
 
 [node name="player_pony" parent="." instance=ExtResource("1_23uou")]
-position = Vector2(16, 8)
+position = Vector2(480, 474)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="player_pony"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(16, 8)
+position = Vector2(480, 474)
 
 [node name="WitchKitty" parent="." instance=ExtResource("2_t0ap7")]
 position = Vector2(484, 338)
