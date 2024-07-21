@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://crsqxvgwejctu" path="res://Assets/HorseAssets/Horses_no_equipment/Horse_socks_black.png" id="2_fka7p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2lou"]
-size = Vector2(19, 44.1176)
+size = Vector2(45, 44.1176)
 
 [sub_resource type="Animation" id="Animation_d2ml0"]
 length = 0.001
@@ -661,7 +661,8 @@ _data = {
 "walk_up": SubResource("Animation_78twc")
 }
 
-[node name="player_pony" type="CharacterBody2D"]
+[node name="player_pony" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
 script = ExtResource("1_m5sog")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
