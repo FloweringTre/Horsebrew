@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bee53c4eufu4e"]
+[gd_scene load_steps=9 format=3 uid="uid://bee53c4eufu4e"]
 
 [ext_resource type="Texture2D" uid="uid://cavjvcqk3gwq7" path="res://Assets/Pet Cats Pack/Cat-2/Cat-2-Idle.png" id="1_kekdi"]
 [ext_resource type="Script" path="res://Scripts/witch_kitty.gd" id="1_swiog"]
+[ext_resource type="PackedScene" uid="uid://841uri4utqum" path="res://GameParts/interaction/interaction_area.tscn" id="3_p6drp"]
 
 [sub_resource type="Animation" id="Animation_wnsvs"]
 length = 0.001
@@ -40,6 +41,12 @@ _data = {
 "idle": SubResource("Animation_tlfpw")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1mfb"]
+size = Vector2(24, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w7uv7"]
+radius = 110.218
+
 [node name="WitchKitty" type="Node2D"]
 script = ExtResource("1_swiog")
 
@@ -51,3 +58,14 @@ hframes = 10
 libraries = {
 "": SubResource("AnimationLibrary_0f0vj")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_m1mfb")
+
+[node name="WKInteractionArea" parent="." instance=ExtResource("3_p6drp")]
+action_name = "talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WKInteractionArea"]
+shape = SubResource("CircleShape2D_w7uv7")
+debug_color = Color(0.838533, 0.339945, 0.478482, 0.42)
