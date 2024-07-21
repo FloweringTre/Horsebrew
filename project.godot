@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+InteractionManager="*res://GameParts/interaction/InteractionManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
@@ -27,7 +28,8 @@ directories/dch_directory={
 "WitchKitty": "res://Dialogue/WitchKitty.dch"
 }
 directories/dtl_directory={
-"InitialDialogue": "res://Dialogue/InitialDialogue.dtl"
+"InitialDialogue": "res://Dialogue/InitialDialogue.dtl",
+"KittyExplain1": "res://Dialogue/KittyExplain1.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -149,6 +151,11 @@ dialogic_default_action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_2="player"
+2d_physics/layer_9="interactions"
 
 [rendering]
 
