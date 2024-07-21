@@ -1,14 +1,19 @@
 [signal arg="DialogueStart"]
 [style name="Style1"]
+skip?
+- yes
+	[signal arg="DialogueEnd"]
+	[end_timeline]
+- no
 PlayerPony: What??? Where .... am....  I???
 PlaceholderMysteryCharacter: ???!!!!!!!!
 PlaceholderMysteryCharacter: What happened to my potion?! ಠ╭╮ಠ
 PlaceholderMysteryCharacter: This is going to take forever to redo! ╥﹏╥
-PlayerPony: potion?? 
+PlayerPony: potion??
 PlayerPony: I hope this has nothing to do with that pot that I found eariler.... ( ⚆ _ ⚆ )
 PlaceholderMysteryCharacter: Oi!  You there, new spirit!
 - Spirit? You don't mean me do you?
-	PlaceholderMysteryCharacter: Nah, Im talking to the other etheral being near me... 
+	PlaceholderMysteryCharacter: Nah, Im talking to the other etheral being near me...
 	PlaceholderMysteryCharacter: Of course I'm talking to you. Come over here, to the water's center so we can talk face to face.
 - Um... yes???
 	PlaceholderMysteryCharacter: Come over here, to the water's center so we can talk face to face.
