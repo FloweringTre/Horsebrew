@@ -2,11 +2,13 @@ extends Node2D
 
 @onready var player = get_tree().get_first_node_in_group("player")
 @onready var label = $Label
+@onready var timer = $Timer
 
 const base_text = "[E] to "
 
 var active_areas = []
 var can_interact = true
+var has_item = false
 
 func register_area(area: InteractionArea):
 	active_areas.push_back(area)
@@ -43,5 +45,8 @@ func _input(event):
 			label.hide()
 			
 			await active_areas[0].interact.call()
-			
-			can_interact = true
+			timer.start()
+
+
+func _on_timer_timeout():
+	can_interact = true
