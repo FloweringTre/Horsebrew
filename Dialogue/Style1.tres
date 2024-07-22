@@ -41,11 +41,13 @@ overrides = {
 "name_label_box_use_global_color": "false",
 "name_label_custom_font_size": "12.0",
 "name_label_font": "\"res://Assets/FONT-bedstead/bedstead-bold.otf\"",
+"name_label_use_global_color": "false",
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
 "next_indicator_size": "Vector2(10, 10)",
 "normal_font": "\"res://Assets/FONT-bedstead/bedstead.otf\"",
 "text_size": "12.0",
+"text_use_global_color": "false",
 "text_use_global_font": "false",
 "text_use_global_size": "false",
 "typing_sounds_volume_variance": "3.0"
@@ -78,7 +80,7 @@ overrides = {}
 
 [resource]
 script = ExtResource("10_uih82")
-name = "Style1"
+name = "NewDefault"
 base_overrides = {}
 layers = Array[ExtResource("2_0vsub")]([SubResource("Resource_haade"), SubResource("Resource_wb8ip"), SubResource("Resource_dqex4"), SubResource("Resource_gg5wc"), SubResource("Resource_j2a24"), SubResource("Resource_8b4up"), SubResource("Resource_wxjl1"), SubResource("Resource_18ypd")])
 metadata/_latest_layer = 3
