@@ -28,8 +28,19 @@ directories/dch_directory={
 "WitchKitty": "res://Dialogue/WitchKitty.dch"
 }
 directories/dtl_directory={
+"BerryReminder": "res://Dialogue/BerryReminder.dtl",
+"BerryStart": "res://Dialogue/BerryStart.dtl",
+"DaffodilReminder": "res://Dialogue/DaffodilReminder.dtl",
+"DaffodilStart": "res://Dialogue/DaffodilStart.dtl",
+"GameEnd": "res://Dialogue/GameEnd.dtl",
+"GameEndReRun": "res://Dialogue/GameEndReRun.dtl",
 "InitialDialogue": "res://Dialogue/InitialDialogue.dtl",
-"KittyExplain1": "res://Dialogue/KittyExplain1.dtl"
+"KittyExplain1": "res://Dialogue/KittyExplain1.dtl",
+"LotusReminder": "res://Dialogue/LotusReminder.dtl",
+"ShellReminder": "res://Dialogue/ShellReminder.dtl",
+"ShellStart": "res://Dialogue/ShellStart.dtl",
+"StarReminder": "res://Dialogue/StarReminder.dtl",
+"StarStart": "res://Dialogue/StarStart.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -52,7 +63,7 @@ save/encryption_on_exports_only=true
 save/autosave=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/style_list=["res://Dialogue/Style1.tres"]
+layout/style_list=["res://Dialogue/Style1.tres", "res://Dialogue/KittyStyle.tres"]
 layout/default_style="res://Dialogue/Style1.tres"
 variables={}
 
