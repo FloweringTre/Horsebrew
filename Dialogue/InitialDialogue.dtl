@@ -1,10 +1,4 @@
 [signal arg="DialogueStart"]
-[style name="NewDefault"]
-skip?
-- yes
-	[signal arg="DialogueEnd"]
-	[end_timeline]
-- no
 PlayerPony: What??? Where .... am....  I???
 PlaceholderMysteryCharacter: ???!!!!!!!!
 PlaceholderMysteryCharacter: What happened to my potion?! ಠ╭╮ಠ
