@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://kvtq3j558ffp"]
+[gd_scene load_steps=23 format=3 uid="uid://kvtq3j558ffp"]
 
 [ext_resource type="Script" path="res://Scripts/player_pony.gd" id="1_m5sog"]
 [ext_resource type="Texture2D" uid="uid://crsqxvgwejctu" path="res://Assets/HorseAssets/Horses_no_equipment/Horse_socks_black.png" id="2_fka7p"]
+[ext_resource type="Script" path="res://Scripts/PonySprite.gd" id="3_la54j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2lou"]
 size = Vector2(45, 44.1176)
@@ -666,11 +667,11 @@ collision_layer = 2
 script = ExtResource("1_m5sog")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.392157)
 texture = ExtResource("2_fka7p")
 hframes = 9
 vframes = 18
 frame = 1
+script = ExtResource("3_la54j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 17)

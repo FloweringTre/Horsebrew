@@ -8,11 +8,11 @@ var linear_vel = Vector2()
 var run_direction = Vector2.DOWN
 
 @export var facing = "right" # (String, "up", "down", "left", "right")
-
-
+@onready var color = self.modulate.a
 
 var anim = ""
 var new_anim = ""
+var level = 0
 
 enum { STATE_BLOCKED, STATE_IDLE, STATE_WALKING, STATE_TROT, STATE_RUN, STATE_JUMP }
 
@@ -22,6 +22,8 @@ var state = STATE_IDLE
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignalEvent)
+	
+	
 	#connects to dialogic signals
 
 func _physics_process(_delta):
@@ -82,7 +84,9 @@ func _physics_process(_delta):
 				goto_idle()
 			pass
 		STATE_TROT:
-			if Input.is_action_just_pressed("sprint"):
+			#if Input.is_action_just_pressed("jump") && level >= 3:
+				#state = STATE_JUMP
+			if Input.is_action_just_pressed("sprint") && level >= 2:
 				state = STATE_RUN
 			if Input.is_action_just_pressed("slow"):
 				state = STATE_WALKING
@@ -117,6 +121,8 @@ func _physics_process(_delta):
 		STATE_RUN:
 			if Input.is_action_just_pressed("slow"):
 				state = STATE_TROT
+			#if Input.is_action_just_pressed("jump") && level >= 3:
+				#state = STATE_JUMP
 			
 			set_velocity(linear_vel)
 			move_and_slide()
@@ -160,8 +166,14 @@ func DialogicSignalEvent(argument:String):
 	if argument == "DialogueEnd":
 		state = STATE_IDLE
 		print("#LETSGOFASSTTTTT")
+	if argument == "LevelUp":
+		level_up()
+		print(level)
 	pass
 
+func level_up():
+	level += 1
+	
 
 ## HELPER FUNCS
 func goto_idle():
