@@ -1,5 +1,5 @@
 [signal arg="DialogueStart"]
-[style name="Style1"]
+[style name="NewDefault"]
 skip?
 - yes
 	[signal arg="DialogueEnd"]

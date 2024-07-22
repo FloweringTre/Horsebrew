@@ -1,0 +1,45 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+PlayerPony: I got the daffodil!! 
+WitchKitty: Great work! We can add that into the potion pot!\
+( ノ・・)ノ
+[signal arg="ShellReady"]
+- What flower am I gathering now?
+	WitchKitty: It's not a flower this time!
+	PlayerPony: Oh! (⚈∇⚈ )\
+Where I am I headed now?
+	WitchKitty: Forward, life always sends us forward. 
+- What happens if I want to stop?
+	WitchKitty: Nothing, you find a home here in the Spirit Realm. 
+	WitchKitty: Is that something you want?
+	- Yes
+		PlayerPony: At least for the moment. I need a break from the quests. 
+		WitchKitty: That's okay. I will be here for when you are ready to continue. 
+		[signal arg="KittyTalkieCounter"]
+		[signal arg="DialogueEnd"]
+		[end_timeline]
+	- No
+		PlayerPony: No, I was just curious. I still want to continue finding ingredients for the potion. 
+		WitchKitty: Alright then, lets continue!
+WitchKitty: So, the daffodil is the self love and respect you have for yourself.
+WitchKitty: When we love and respect ourselves we are connected deeply to ourselves. 
+WitchKitty: I want you to breathe deeply and push your hooves into the Earth. 
+WitchKitty: Ground yourself deeply into the soil and grass, feel the Earth supporting each of your hooves, and you as an extension. 
+[signal arg="LevelUp"]
+PlayerPony: I feel ......
+PlayerPony: .... stronger... as if the Earth is giving me strength\
+(─‿‿─) ♡
+WitchKitty: You have grounded your spirit into your body a bit more. You should be able to run even faster now! 
+PlayerPony: Yay! I love running as fast as the wind with my herd!
+WitchKitty: Then lets get you back to them!
+WitchKitty: The next ingredient we need is a vessel that holds the Sea within it.
+- What does that mean?
+	WitchKitty: There is an item that is known for 'holding' the Sea in it. 
+	PlayerPony: Okay.... well do you know where I should look for it?
+	WitchKitty: The Sea meets this land to the south, you can start looking there!
+	PlayerPony: Alright! I'll start looking there then!
+- On it! I'm going to be back so fast!
+WitchKitty: Sounds good, I will be waiting here for you to return!\
+ヽ(•‿•)ノ
+[signal arg="KittyTalkieCounter"]
+[signal arg="DialogueEnd"]

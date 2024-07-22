@@ -1,0 +1,31 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+PlayerPony: I got the star fragment!
+WitchKitty: Great work! Add it into the pot and lets finish this potion!
+[signal arg="PotionComplete"]
+[signal arg="LevelUp"]
+PlayerPony: I'm back to my normal self!
+PlayerPony: Thank you so much Witch Kitty!
+WitchKitty: You put in the work for it Pony. If you didn't spend the time connecting with yourself, this potion wouldn't have worked. 
+WitchKitty: It is your dedication to yourself that was the key piece of this potion
+- What does that mean?
+	WitchKitty: You wanted to connect to your body and you took the time to sit with yourself and find it. 
+	PlayerPony: I guess you're right. I did give myself a lot more thought than I normally do.
+	WitchKitty: I am glad that you gave yourself the space to heal and also didn't give up on yourself. 
+	PlayerPony: Thank you, Witch Kitty... for not giving up on me either. 
+	WitchKitty: Of course Pony. \
+♡｡ﾟ.(*♡´‿` 人´‿` ♡*)ﾟ♡ °・
+- So I can go home now?
+	WitchKitty: Yes! You are free to leave through the Spirit Gate and follow the river back to the Mortal Realm and your herd. 
+WitchKitty: Thank you for your help, Pony. I appreciate it. 
+PlayerPony: Of course, will i see you again?
+WitchKitty: Maybe... but I hope next time it's not because you split my potion. \
+(・ω<)
+PlayerPony: I promist to not touch any potion pots ever again!\
+(>▽<)
+\------ from tre -----\
+Thank you for play testing my game!
+If you have feedback please send it my way via discord!
+There is no ending yet, but you are welcome to wander the (very crummy) map that I currently have!
+[signal arg="KittyTalkieCounter"]
+[signal arg="DialogueEnd"]

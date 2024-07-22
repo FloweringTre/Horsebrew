@@ -1,0 +1,37 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+PlayerPony: I got the shell!!
+WitchKitty: Great work! We can add that into the potion pot!\
+( ノ・・)ノ
+[signal arg="BerryReady"]
+WitchKitty: We are so close to finishing, only two more ingridents left!
+PlayerPony: I can't wait to get home!\
+ヾ( ⌒ ∇ ⌒ )ﾉ
+WitchKitty: Alright, so the conch shell is the rhythmic flow of the ocean, and in turn our lives.
+WitchKitty: Our lives will have times of high tide and happiness, and times of low tide and sadness.
+WitchKitty: The ebb and flow of these times and tides of our lives is to be expected. We can't always have high tide. 
+PlayerPony: Nor always have low tide?\
+(◡︵◡)
+WitchKitty: Yes, exactly. Everything will pass with time. We can just enjoy the moment and find peace in it.
+WitchKitty: I want you to breathe deeply and find peace in this truth.
+PlayerPony: ** breathe in..... **
+[signal arg="LevelUp"]
+PlayerPony: ** .... breathe out **
+WitchKitty: Your peace and calmness have strengthened your connection with your body even more. 
+WitchKitty: You should be able to jump again now. 
+PlayerPony: Fantastic! My mare always said I was a good jumper! \
+(◍•ᴗ•◍)❤
+PlayerPony: [I can't actually jump right now... tre has yet to code this]\
+ಠ_ಠ
+WitchKitty: Let's get you back to her then.
+WitchKitty: The next ingredient we need is nurisment for the body.
+- What does that mean?
+	WitchKitty: Your spirit may not need food, but your body does. We need to find something to feed it.
+	PlayerPony: Okay.... well do you know where I should look for it?
+	WitchKitty: The Forest west of here is known for its delicious berries.
+	PlayerPony: Alright! I'll start looking there then!
+- I got it! Be back soon!
+WitchKitty: Sounds good, I will be waiting here for you to return!\
+ヽ(•‿•)ノ
+[signal arg="KittyTalkieCounter"]
+[signal arg="DialogueEnd"]

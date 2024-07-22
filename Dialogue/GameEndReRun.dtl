@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+\------ from tre -----\
+Thank you for play testing my game!
+If you have feedback please send it my way via discord!
+There is no ending yet, but you are welcome to wander the (very crummy) map that I currently have!
+[signal arg="DialogueEnd"]

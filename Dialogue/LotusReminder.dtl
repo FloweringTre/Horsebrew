@@ -1,0 +1,20 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+WitchKitty: Hi again!
+- What was I looking for again?
+	WitchKitty: The first item for the potion is a water plant that symbolizes rebirth.
+	WitchKitty: It should grow in this river system, it is the water of life that flows from the Spirit Realm into the Mortal Realm.
+	- Got it! I'll be right back with it!
+		WitchKitty: I'll be here waiting for you to return. \
+(＾▽＾)/
+	- ..... Can I have a hint please?
+		WitchKitty: Sure! It is a lotus flower. It is a pink flower that grows in the river that surrounds us.
+		PlayerPony: Okay! Thanks for the help!  I'll be back soon.
+		WitchKitty: I'll be here waiting for you to return. \
+(＾▽＾)/
+- Just stoping by!
+	WitchKitty: Well hello then!
+	WitchKitty: I'm just here preping my pot for the potion. So it is ready when you bring back the item. \
+(^ω^)
+	PlayerPony: Okay! I'll be back soon.
+[signal arg="DialogueEnd"]
