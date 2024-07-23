@@ -9,10 +9,11 @@ var run_direction = Vector2.DOWN
 
 @export var facing = "right" # (String, "up", "down", "left", "right")
 @onready var color = self.modulate.a
+@export var level = 0
 
 var anim = ""
 var new_anim = ""
-var level = 0
+
 
 enum { STATE_BLOCKED, STATE_IDLE, STATE_WALKING, STATE_TROT, STATE_RUN, STATE_JUMP }
 
@@ -50,6 +51,19 @@ func _physics_process(_delta):
 				_update_facing()
 			new_anim = "idle_" + facing
 			pass
+		STATE_JUMP:
+			if run_direction == Vector2.ZERO:
+				state = STATE_IDLE
+			else:
+				set_velocity(linear_vel)
+				move_and_slide()
+				linear_vel = velocity
+				var target_speed = Vector2()
+				target_speed = run_direction
+				target_speed *= GALLOP_SPEED
+				#linear_vel = linear_vel.linear_interpolate(target_speed, 0.9)
+				linear_vel = target_speed
+				new_anim = "jump_" + facing
 		STATE_WALKING:
 			if Input.is_action_just_pressed("sprint"):
 				state = STATE_TROT
@@ -84,8 +98,6 @@ func _physics_process(_delta):
 				goto_idle()
 			pass
 		STATE_TROT:
-			#if Input.is_action_just_pressed("jump") && level >= 3:
-				#state = STATE_JUMP
 			if Input.is_action_just_pressed("sprint") && level >= 2:
 				state = STATE_RUN
 			if Input.is_action_just_pressed("slow"):
@@ -121,8 +133,8 @@ func _physics_process(_delta):
 		STATE_RUN:
 			if Input.is_action_just_pressed("slow"):
 				state = STATE_TROT
-			#if Input.is_action_just_pressed("jump") && level >= 3:
-				#state = STATE_JUMP
+			if Input.is_action_just_pressed("jump") && level >= 3:
+				state = STATE_JUMP
 			
 			set_velocity(linear_vel)
 			move_and_slide()
@@ -181,6 +193,10 @@ func goto_idle():
 	new_anim = "idle_" + facing
 	state = STATE_IDLE
 
+func goto_run():
+	linear_vel = velocity
+	new_anim = "gallop_" + facing
+	state = STATE_RUN
 
 func _update_facing():
 	if Input.is_action_pressed("left"):
@@ -191,6 +207,15 @@ func _update_facing():
 		facing = "up"
 	if Input.is_action_pressed("down"):
 		facing = "down"
+		
+	if Input.is_action_pressed("left") && Input.is_action_pressed("up"):
+		facing = "left"
+	if Input.is_action_pressed("right") && Input.is_action_pressed("up"):
+		facing = "right"
+	if Input.is_action_pressed("left") && Input.is_action_pressed("down"):
+		facing = "left"
+	if Input.is_action_pressed("right") && Input.is_action_pressed("down"):
+		facing = "right"
 
 
 
