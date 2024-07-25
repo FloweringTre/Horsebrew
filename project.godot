@@ -63,9 +63,10 @@ save/encryption_on_exports_only=true
 save/autosave=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/style_list=["res://Dialogue/Style1.tres", "res://Dialogue/KittyStyle.tres"]
+layout/style_list=["res://Dialogue/Style1.tres", "res://Dialogue/bubble_style.tres"]
 layout/default_style="res://Dialogue/Style1.tres"
 variables={}
+choices/hotkey_behaviour=1
 
 [display]
 
