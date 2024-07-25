@@ -3,18 +3,19 @@ extends Node2D
 var anim = ""
 var new_anim = ""
 
-enum { KITTY_IDLE, KITTY_LICK, KITTY_LAYDOWN, KITTY_SLEEP, KITTY_ITCH, KITTY_TALK }
+enum { KITTY_IDLE, KITTY_LICK_PAW, KITTY_LICK_FUR, KITTY_LOOK, KITTY_MAD }
 
 var kitty_state = KITTY_IDLE
 var kitty_talkie_counter = 0
 
+@export var idle_time : float = randi_range(4, 12)
 
-	
 
 @onready var interaction_area: InteractionArea = $WKInteractionArea
-
+@onready var timer = $Timer
 
 func _ready():
+	pick_new_state()
 	interaction_area.interact = Callable(self, "_on_interact")
 	Dialogic.signal_event.connect(DialogicSignalEvent) #connects to dialogic signals
 	
@@ -22,8 +23,19 @@ func _ready():
 	
 	match kitty_state:
 		KITTY_IDLE:
-			new_anim = "idle"
+			new_anim = "sit_calmly"
 		
+		KITTY_LICK_FUR:
+			new_anim = "groom_fur"
+		
+		KITTY_LICK_PAW:
+			new_anim = "groom_paw"
+		
+		KITTY_LOOK:
+			new_anim = "sit_turn_head"
+		
+		KITTY_MAD:
+			new_anim = "sit_mad"
 	
 	if new_anim != anim:
 			anim = new_anim
@@ -102,4 +114,51 @@ func _on_interact():
 	else:
 		print("I have been interacted with... but I have no dialogue to give")
 		pass
+
+func pick_new_state():
+	var number = (randi() % 7)
+	if number == 0:
+		kitty_state = KITTY_LICK_FUR
+		new_anim = "groom_fur"
+		print(number)
+		print(new_anim)
+		if new_anim != anim:
+			anim = new_anim
+			$AnimationPlayer.play(anim)
+		return
+	if number == 1:
+		kitty_state = KITTY_LICK_PAW
+		new_anim = "groom_paw"
+		print(number)
+		print(new_anim)
+		if new_anim != anim:
+			anim = new_anim
+			$AnimationPlayer.play(anim)
+		return
+	if number == 2: 
+		kitty_state = KITTY_LOOK
+		new_anim = "sit_turn_head"
+		print(number)
+		print(new_anim)
+		if new_anim != anim:
+			anim = new_anim
+			$AnimationPlayer.play(anim)
+		return
+	if number > 2:
+		kitty_state = KITTY_IDLE
+		new_anim = "sit_calmly"
+		print(number)
+		print(new_anim)
+		if new_anim != anim:
+			anim = new_anim
+			$AnimationPlayer.play(anim)
+		return
+	
+
+
+
+#helper functions
+func kitty_goto_idle():
+	kitty_state = KITTY_IDLE
+	new_anim = "sit_idle"
 
