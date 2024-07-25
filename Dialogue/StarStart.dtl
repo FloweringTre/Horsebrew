@@ -1,5 +1,5 @@
-[signal arg="DialogueStart"]
 [style name="NewDefault"]
+[signal arg="DialogueStart"]
 PlayerPony: I got the blue berries!
 WitchKitty: Great work! We can add them into the potion pot!\
 ( ノ・・)ノ
@@ -7,18 +7,18 @@ WitchKitty: Great work! We can add them into the potion pot!\
 WitchKitty: Only one ingredient to go!
 PlayerPony: Woo!!! So close!\
 ヽ (°◇° )ノ
-WitchKitty: Alright, these berries are to nourish your body. It is important that we always feed our bodies and spirits. 
+WitchKitty: Alright, these berries are to nourish your body. It is important that we always feed our bodies and spirits.
 PlayerPony: How do you feed your spirit?
 WitchKitty: You said you like running with your herd, yes?
 PlayerPony: It is my favorite thing, it makes me happy!
-WitchKitty: That is nourishment for your spirit. You need to remember to feed your body /AND/ your spirit. 
-WitchKitty: If one is starving, it is hard to stay connected between your body and spirit. 
+WitchKitty: That is nourishment for your spirit. You need to remember to feed your body /AND/ your spirit.
+WitchKitty: If one is starving, it is hard to stay connected between your body and spirit.
 PlayerPony: So eat my food, and do things that make me happy?
 WitchKitty: Yes!  (─‿‿─) ♡
-WitchKitty: A healthy spirit is one that has been 'fed' with good experiences that nourishes it with happiness. 
+WitchKitty: A healthy spirit is one that has been 'fed' with good experiences that nourishes it with happiness.
 [signal arg="LevelUp"]
-PlayerPony: I feel so close to being myself again... 
-WitchKitty: Lets get you back to your normal self completely then. 
+PlayerPony: I feel so close to being myself again...
+WitchKitty: Lets get you back to your normal self completely then.
 WitchKitty: The fifth and last ingredient for the potion is a piece of a celestial body.
 - What does that mean?
 	WitchKitty: A celestial body is something that comes from beyond our Earth, from the heavens above.
