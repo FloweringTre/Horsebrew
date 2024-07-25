@@ -64,6 +64,7 @@ overrides = {}
 script = ExtResource("2_asijj")
 scene = ExtResource("7_h0y8a")
 overrides = {
+"boxes_offset": "Vector2(100, 40)",
 "font_custom": "\"res://Assets/FONT-bedstead/bedstead.otf\"",
 "font_size_custom": "10.0",
 "font_size_use_global": "false",
@@ -85,4 +86,4 @@ script = ExtResource("10_o44v7")
 name = "KittyStyle"
 base_overrides = {}
 layers = Array[ExtResource("2_asijj")]([SubResource("Resource_gh6fv"), SubResource("Resource_50jtd"), SubResource("Resource_4t7dm"), SubResource("Resource_0jg04"), SubResource("Resource_45ehg"), SubResource("Resource_mvobr"), SubResource("Resource_s8isf"), SubResource("Resource_bnpfr")])
-metadata/_latest_layer = 3
+metadata/_latest_layer = 5
