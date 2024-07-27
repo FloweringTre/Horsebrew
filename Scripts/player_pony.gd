@@ -15,7 +15,7 @@ var anim = ""
 var new_anim = ""
 
 
-enum { STATE_BLOCKED, STATE_IDLE, STATE_WALKING, STATE_TROT, STATE_RUN, STATE_JUMP }
+enum { STATE_BLOCKED, STATE_IDLE, STATE_WALKING, STATE_TROT, STATE_RUN, STATE_JUMP, STATE_REAR }
 
 var state = STATE_IDLE
 
@@ -52,18 +52,21 @@ func _physics_process(_delta):
 			new_anim = "idle_" + facing
 			pass
 		STATE_JUMP:
-			if run_direction == Vector2.ZERO:
-				state = STATE_IDLE
-			else:
-				set_velocity(linear_vel)
-				move_and_slide()
-				linear_vel = velocity
-				var target_speed = Vector2()
-				target_speed = run_direction
-				target_speed *= GALLOP_SPEED
-				#linear_vel = linear_vel.linear_interpolate(target_speed, 0.9)
-				linear_vel = target_speed
+			set_velocity(linear_vel)
+			move_and_slide()
+			linear_vel = velocity
+			var target_speed = Vector2()
+			target_speed = run_direction
+			target_speed *= GALLOP_SPEED - 25
+			#linear_vel = linear_vel.linear_interpolate(target_speed, 0.9)
+			linear_vel = target_speed
+			if linear_vel.length() > 5:
 				new_anim = "jump_" + facing
+			else:
+				goto_rear()
+			pass
+		STATE_REAR:
+			new_anim = "rear_" + facing
 		STATE_WALKING:
 			if Input.is_action_just_pressed("sprint"):
 				state = STATE_TROT
@@ -193,6 +196,11 @@ func goto_idle():
 	new_anim = "idle_" + facing
 	state = STATE_IDLE
 
+func goto_rear():
+	linear_vel = Vector2.ZERO
+	new_anim = "rear_" + facing
+	state = STATE_REAR
+
 func goto_run():
 	linear_vel = velocity
 	new_anim = "gallop_" + facing
@@ -221,3 +229,10 @@ func _update_facing():
 
 
 	
+
+
+func _on_area_2d_body_entered(body):
+	if state == STATE_JUMP:
+		goto_rear()
+	else:
+		pass
