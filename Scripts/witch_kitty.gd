@@ -45,6 +45,25 @@ func _ready():
 func DialogicSignalEvent(argument:String):
 	if argument == "KittyTalkieCounter":
 		kitty_talkie_counter += 1
+		return
+	if argument == "KittyMad":
+		kitty_state = KITTY_MAD
+		new_anim = "sit_mad"
+		print("Dialogue Kitty Animation:")
+		print(new_anim)
+		if new_anim != anim:
+			anim = new_anim
+			$AnimationPlayer.play(anim)
+		return
+	if argument == "KittyIdle":
+		kitty_state = KITTY_IDLE
+		new_anim = "sit_calmly"
+		print("Dialogue Kitty Animation:")
+		print(new_anim)
+		if new_anim != anim:
+			anim = new_anim
+			$AnimationPlayer.play(anim)
+		return
 	pass
 
 func _on_interact():
