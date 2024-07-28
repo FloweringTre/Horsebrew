@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://841uri4utqum" path="res://GameParts/interaction/interaction_area.tscn" id="3_ecrf4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_38tho"]
-radius = 57.1402
+radius = 107.042
 
 [sub_resource type="Animation" id="Animation_45kiv"]
 length = 0.001
