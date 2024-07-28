@@ -1,28 +1,22 @@
 [signal arg="DialogueStart"]
 [style name="NewDefault"]
 PlayerPony: I got the shell!!
-WitchKitty: Great work! We can add that into the potion pot!\
-( ノ・・)ノ
+WitchKitty: Great work! We can add that into the potion pot!
 [signal arg="BerryReady"]
 WitchKitty: We are so close to finishing, only two more ingridents left!
-PlayerPony: I can't wait to get home!\
-ヾ( ⌒ ∇ ⌒ )ﾉ
+PlayerPony: I can't wait to get home!
 WitchKitty: Alright, so the conch shell is the rhythmic flow of the ocean, and in turn our lives.
 WitchKitty: Our lives will have times of high tide and happiness, and times of low tide and sadness.
-WitchKitty: The ebb and flow of these times and tides of our lives is to be expected. We can't always have high tide. 
-PlayerPony: Nor always have low tide?\
-(◡︵◡)
+WitchKitty: The ebb and flow of these times and tides of our lives is to be expected. We can't always have high tide.
+PlayerPony: Nor always have low tide?
 WitchKitty: Yes, exactly. Everything will pass with time. We can just enjoy the moment and find peace in it.
 WitchKitty: I want you to breathe deeply and find peace in this truth.
 PlayerPony: ** breathe in..... **
 [signal arg="LevelUp"]
 PlayerPony: ** .... breathe out **
-WitchKitty: Your peace and calmness have strengthened your connection with your body even more. 
-WitchKitty: You should be able to jump again now. 
-PlayerPony: Fantastic! My mare always said I was a good jumper! \
-(◍•ᴗ•◍)❤
-PlayerPony: [I can't actually jump right now... tre has yet to code this]\
-ಠ_ಠ
+WitchKitty: Your peace and calmness have strengthened your connection with your body even more.
+WitchKitty: You should be able to jump again now.
+PlayerPony: Fantastic! My mare always said I was a good jumper!
 WitchKitty: Let's get you back to her then.
 WitchKitty: The next ingredient we need is nurisment for the body.
 - What does that mean?
@@ -31,7 +25,8 @@ WitchKitty: The next ingredient we need is nurisment for the body.
 	WitchKitty: The Forest west of here is known for its delicious berries.
 	PlayerPony: Alright! I'll start looking there then!
 - I got it! Be back soon!
-WitchKitty: Sounds good, I will be waiting here for you to return!\
-ヽ(•‿•)ノ
+WitchKitty: Sounds good, I will be waiting here for you to return!
+~~ You can now jump! Press SPACEBAR while galloping to jump! ~~
+~~ Mind the gaps though! If you can't make a jump you stop before you jump for safety! ~~
 [signal arg="KittyTalkieCounter"]
 [signal arg="DialogueEnd"]

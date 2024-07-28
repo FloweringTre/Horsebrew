@@ -1,22 +1,18 @@
 [signal arg="DialogueStart"]
 [style name="NewDefault"]
-WitchKitty: Hello hello!\
-☆(◒‿◒)☆
+WitchKitty: Hello hello!
 - What is the last ingredient again?
 	WitchKitty: The fifth and last ingredient for the potion is a piece of a celestial body.
 	WitchKitty: The Cliffs to the north are known for their amazing views of the night sky and the shooting stars we often have here.
 	- Got it! I'll be right back with it!
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 	- ..... Can I have a hint please?
-		WitchKitty: Sure! It is a star fragment. It is a yellow piece of a star that fell during the last meteor shower. 
+		WitchKitty: Sure! It is a star fragment. It is a yellow piece of a star that fell during the last meteor shower.
 		WitchKitty: The star fragments tend to land on the tallest of the Cliffs to the north.
 		PlayerPony: Okay! Thanks for the help!  I'll be back soon.
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 - Just stoping by!
 	WitchKitty: Well hello then!
-	WitchKitty: I'm just here working on the potion. \
-(◕‿◕✿)
+	WitchKitty: I'm just here working on the potion. 
 	PlayerPony: Okay! I'll be back soon.
 [signal arg="DialogueEnd"]

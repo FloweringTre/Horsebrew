@@ -8,47 +8,45 @@ PlaceholderMysteryCharacter: Well you finally made it....
 	PlayerPony: I am just a normal pony! I want to go home!
 - Why did you call me a spirit?
 	[signal arg="KittyMad"]
-	PlaceholderMysteryCharacter: Well that's one way to start a conversation  (¬､¬)
+	PlaceholderMysteryCharacter: Well that's one way to start a conversation 
 	[signal arg="KittyIdle"]
 	PlaceholderMysteryCharacter: Because you are one, you are here in the Spirit Realm, only Spirits and those with the Gift can be here.
 	- Well then who are you?
 		WitchKitty: I'm Witch Kitty, I make potions for wayward spirits in the Mortal Realm to make it back here to the Spirit Realm.
 		PlayerPony: Hi Witch Kitty, can I go back home? I am just a normal pony.
 	- I am just a normal pony! I want to go home!
-		WitchKitty: Hi Normal Pony, I'm Witch Kitty.  d–(^ ‿ ^ )z
+		WitchKitty: Hi Normal Pony, I'm Witch Kitty. 
 		PlayerPony: Ha.. ha... but seriously, I'm not a spirit. ... and 'Pony' is fine.
 [signal arg="KittyMad"]
-WitchKitty: Well, the only way you could became a spirit as a mortal is if you messed with my potion. (¬_¬)
+WitchKitty: Well, the only way you could became a spirit as a mortal is if you messed with my potion.
 - Be Honest
 	[signal arg="KittyIdle"]
-	PlayerPony: ╥﹏╥ .... okay I may have messed with the potion. I'm sorry.
+	PlayerPony:  .... okay I may have messed with the potion. I'm sorry.
 	WitchKitty: Thank you for being honest. It's okay.
-	WitchKitty: We don't need to cry over spilled potions. \
-(づ￣ ³￣)づ
+	WitchKitty: We don't need to cry over spilled potions. 
 - Lie
-	PlayerPony: (⊙﹏⊙) .... I have no idea how I got here
-	WitchKitty: Sure...... ಠ╭╮ಠ
+	PlayerPony:  .... I have no idea how I got here
+	WitchKitty: Sure......
 	[signal arg="KittyIdle"]
 WitchKitty: Anyway, the only way for you to return to the Mortal Realm and your normal mortal life is to reconnect your Spirit and your body.
-PlayerPony: Is that why I am a shadow of myself? (；w；)
+PlayerPony: Is that why I am a shadow of myself? 
 WitchKitty: Yes... I can make a potion to rejoin your spirit and body.
-PlayerPony: Really?!  ( ´   ⌣  ` ʃƪ)
+PlayerPony: Really?! 
 WitchKitty: Yes... but it will take me a long time to regather all the items that the potion takes. I could use some help...
 - I can help!
 	WitchKitty: I would sure hope so.
 	WitchKitty: Any attempts to leave early without connecting to your body will result in being this shadow version of yourself for the remainer of eternity.
-	PlayerPony: Alright, well then lets get started! ( •́ ω •̀)
-	WitchKitty: Alright! (◠‿◠✿)
+	PlayerPony: Alright, well then lets get started! 
+	WitchKitty: Alright!
 - Well, have fun with that.
 	WitchKitty: Well, have fun hanging out doing nothing.
 	WitchKitty: Any attempts to leave early without connecting to your body will result in being this shadow version of yourself for the remainer of eternity.
-	PlayerPony: (O_o) ...... Okay, I'll help
-	WitchKitty: Thank you for your kindness. (◠‿◠✿)
+	PlayerPony:  ...... Okay, I'll help
+	WitchKitty: Thank you for your kindness.
 WitchKitty: The first item for the potion is a water plant that symbolizes rebirth.
 WitchKitty: It should grow in this river system, it is the water of life that flows from the Spirit Realm into the Mortal Realm.
 PlayerPony: So just get it and bring it back to you?
-WitchKitty: Yup! I'll be here getting the potion prepared!\
-( ｡◕‿‿◕｡ )
+WitchKitty: Yup! I'll be here getting the potion prepared!
 [signal arg="LotusReady"]
 [signal arg="KittyTalkieCounter"]
 [signal arg="DialogueEnd"]

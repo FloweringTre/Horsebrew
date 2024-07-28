@@ -1,21 +1,17 @@
 [signal arg="DialogueStart"]
 [style name="NewDefault"]
-WitchKitty: Hello hello!\
-(✿◠‿◠)
+WitchKitty: Hello hello!
 - What is the next item again?
 	WitchKitty: The fourth item for the potion is nurisment for the body.
 	WitchKitty: The Forest west of here is known for its delicious berries.
 	- Thanks! I'll be right back!
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 	- ..... Can I have a hint please?
 		WitchKitty: Sure! It is some blueberries! The Forest west of here has some that you can gather!
 		PlayerPony: Okay! Thanks for the help!  I'll be back soon.
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 - Just stoping by!
 	WitchKitty: Well hello then!
-	WitchKitty: I'm just here working on the potion. \
-(◕‿◕✿)
+	WitchKitty: I'm just here working on the potion. 
 	PlayerPony: Okay! I'll be back soon.
 [signal arg="DialogueEnd"]

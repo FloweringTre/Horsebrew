@@ -1,28 +1,24 @@
 [signal arg="DialogueStart"]
 [style name="NewDefault"]
-PlayerPony: I got the lotus!! \
-(ﾉ◕ヮ◕)ﾉ ✿
+PlayerPony: I got the lotus!! 
 WitchKitty: Fantastic! Lets put it in the pot!
 [signal arg="DaffodilReady"]
 - What's next?
 	WitchKitty: You sure are eagar get home!
-	PlayerPony: I miss my herd!  (Ｔ▽Ｔ)
+	PlayerPony: I miss my herd! 
 	WitchKitty: Then lets get to work so you can get home!
 - How long is this going to take?
 	WitchKitty: Patience is a virtue. It takes time to rejoin your spirit and body.
 WitchKitty: So, the lotus is the rebirth of your spirit rejoining with your body.
 WitchKitty: This is the first step in your body and spirit coming back together.
 [signal arg="LevelUp"]
-PlayerPony: Hey! I'm a little less see-through! \
-(  ｡^‿^｡ )
+PlayerPony: Hey! I'm a little less see-through! 
 WitchKitty: Yes! Every ingrident we add will get you closer to your body!
 WitchKitty: The next ingredient we need is a flower clothed in sunshine that represts self-love and resepect.
 - Any ideas where to find it?
-	WitchKitty: The Meadow to the east should have some flowers. \
-(✿◠‿◠)
+	WitchKitty: The Meadow to the east should have some flowers. 
 	PlayerPony: Thanks! I'll be on my way!
 - You got it! I will be right back!
-WitchKitty: Alright! I will be here! \
-ヾ(^ ^ゞ
+WitchKitty: Alright! I will be here! 
 [signal arg="KittyTalkieCounter"]
 [signal arg="DialogueEnd"]

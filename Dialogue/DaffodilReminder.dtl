@@ -1,21 +1,17 @@
 [signal arg="DialogueStart"]
 [style name="NewDefault"]
-WitchKitty: Hi again!\
-ヾ(●ω●)ノ
+WitchKitty: Hi again!
 - What was I looking for again?
 	WitchKitty: The second item for the potion is a flower clothed in sunshine that represts self-love and resepect.
-	WitchKitty: The Meadow to the east should have some flowers. 
+	WitchKitty: The Meadow to the east should have some flowers.
 	- Sounds good, see you soon!
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 	- ..... Can I have a hint please?
 		WitchKitty: Sure! It is a daffodil flower. It is a yellow flower that grows in the Meadow land to the east.
 		PlayerPony: Okay! Thanks for the help!  I'll be back soon.
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 - Just stoping by!
 	WitchKitty: Well hello then!
-	WitchKitty: I'm just here working on the potion. \
-(◕‿◕✿)
+	WitchKitty: I'm just here working on the potion. 
 	PlayerPony: Okay! I'll be back soon.
 [signal arg="DialogueEnd"]

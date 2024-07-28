@@ -1,21 +1,17 @@
 [signal arg="DialogueStart"]
 [style name="NewDefault"]
-WitchKitty: Hello hello!\
-(๑ ‵ ● ‿ ● ‵ ๑)
+WitchKitty: Hello hello!
 - What is the next ingredient again?
 	WitchKitty: The third item for the potion is a vessel that holds the Sea within it.
-	WitchKitty: The Sea is south of here, I recommend starting your search for it there. 
+	WitchKitty: The Sea is south of here, I recommend starting your search for it there.
 	- Got it! I'll be right back with it!
 	- ..... Can I have a hint please?
 		WitchKitty: Sure! It is a conch shell. They are found along the beach next to the Sea located south of here.
 		PlayerPony: Okay! Thanks for the help!  I'll be back soon.
-		WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+		WitchKitty: I'll be here waiting for you to return. 
 - Just stoping by!
 	WitchKitty: Well hello then!
-	WitchKitty: I'm just here working on the potion. \
-(◕‿◕✿)
+	WitchKitty: I'm just here working on the potion. 
 	PlayerPony: Okay! I'll be back soon.
 [signal arg="DialogueEnd"]
-WitchKitty: I'll be here waiting for you to return. \
-(＾▽＾)/
+WitchKitty: I'll be here waiting for you to return. 
