@@ -1,0 +1,9 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+PlaceholderMysteryCharacter: Are you ready to go back to the mortal realm?
+- Yes
+	PlaceholderMysteryCharacter: Safe travels home little one...
+	[signal arg="GameEnd"]
+- No
+	PlaceholderMysteryCharacter: Alright then... Come back when you are ready to leave...
+[signal arg="DialogueEnd"]
