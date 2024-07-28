@@ -90,4 +90,4 @@ base_overrides = {
 "global_font": "\"res://Assets/FONT-bedstead/bedstead.otf\""
 }
 layers = Array[ExtResource("2_0vsub")]([SubResource("Resource_haade"), SubResource("Resource_wb8ip"), SubResource("Resource_dqex4"), SubResource("Resource_gg5wc"), SubResource("Resource_j2a24"), SubResource("Resource_8b4up"), SubResource("Resource_wxjl1"), SubResource("Resource_18ypd")])
-metadata/_latest_layer = 5
+metadata/_latest_layer = 3
