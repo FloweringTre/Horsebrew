@@ -1,18 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://dluoam0a4d4q"]
+[gd_scene load_steps=8 format=3 uid="uid://dluoam0a4d4q"]
 
-[ext_resource type="Script" path="res://SpirtGateCollection.gd" id="1_jsngw"]
+[ext_resource type="Script" path="res://GameParts/SceneSwitching/SpirtGateCollection.gd" id="1_jsngw"]
 [ext_resource type="PackedScene" uid="uid://ckg4sstyb5cid" path="res://GameParts/Items/tall_gate_post.tscn" id="2_b7xvd"]
 [ext_resource type="PackedScene" uid="uid://dyinvm3nhgtym" path="res://GameParts/Items/short_gate_post.tscn" id="3_v4v8p"]
-[ext_resource type="PackedScene" uid="uid://841uri4utqum" path="res://GameParts/interaction/interaction_area.tscn" id="4_kp18a"]
+[ext_resource type="Script" path="res://GameParts/SceneSwitching/GateCollision.gd" id="4_fj58g"]
+[ext_resource type="Script" path="res://GameParts/SceneSwitching/TravelGate.gd" id="4_o8cwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dn8p7"]
 size = Vector2(253, 85.3915)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a17k2"]
-radius = 62.1495
+radius = 28.255
 height = 363.452
 
-[node name="SpirtGateCollection" type="Node2D"]
+[node name="SpirtGateCollection" type="StaticBody2D"]
 position = Vector2(127, -49)
 script = ExtResource("1_jsngw")
 
@@ -33,14 +34,21 @@ z_index = 10
 position = Vector2(-196, 116)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-175, 51)
+position = Vector2(-193, 45)
 rotation = -0.523278
 shape = SubResource("RectangleShape2D_dn8p7")
+script = ExtResource("4_fj58g")
 
-[node name="InteractionArea" parent="." instance=ExtResource("4_kp18a")]
+[node name="TravelGate" type="Area2D" parent="."]
+script = ExtResource("4_o8cwg")
+to_scene = "res://Scenes/mortal_realm.tscn"
+spawnpoint = "EndSpawn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-129, 88)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TravelGate"]
+position = Vector2(-133, 77)
 rotation = -2.07177
 shape = SubResource("CapsuleShape2D_a17k2")
 debug_color = Color(0.690262, 0.496455, 0.0978777, 0.42)
+
+[connection signal="body_entered" from="TravelGate" to="TravelGate" method="_on_body_entered"]
+[connection signal="body_exited" from="TravelGate" to="TravelGate" method="_on_body_exited"]
