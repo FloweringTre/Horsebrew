@@ -30,6 +30,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "BerryReminder": "res://Dialogue/BerryReminder.dtl",
 "BerryStart": "res://Dialogue/BerryStart.dtl",
+"CantJump": "res://Dialogue/CantJump.dtl",
 "DaffodilReminder": "res://Dialogue/DaffodilReminder.dtl",
 "DaffodilStart": "res://Dialogue/DaffodilStart.dtl",
 "GameEnd": "res://Dialogue/GameEnd.dtl",
@@ -63,7 +64,7 @@ save/encryption_on_exports_only=true
 save/autosave=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/style_list=["res://Dialogue/Style1.tres", "res://Dialogue/bubble_style.tres"]
+layout/style_list=["res://Dialogue/Style1.tres", "res://Assets/FONT-bedstead/smoltextbox.tres"]
 layout/default_style="res://Dialogue/Style1.tres"
 variables={}
 choices/hotkey_behaviour=1
