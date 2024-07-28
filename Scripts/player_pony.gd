@@ -225,12 +225,6 @@ func _update_facing():
 	if Input.is_action_pressed("right") && Input.is_action_pressed("down"):
 		facing = "right"
 
-
-
-
-	
-
-
 func _on_area_2d_body_entered(body):
 	if state == STATE_JUMP:
 		goto_rear()
