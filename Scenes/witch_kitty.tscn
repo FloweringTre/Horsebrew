@@ -347,6 +347,7 @@ script = ExtResource("1_swiog")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_5xl2q")
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
