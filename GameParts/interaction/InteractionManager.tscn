@@ -7,14 +7,16 @@
 script = ExtResource("1_aoj46")
 
 [node name="Label" type="Label" parent="."]
+z_index = 15
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -52.5
-offset_right = 52.5
-offset_bottom = 23.0
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 17.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_nghb6")
+theme_override_font_sizes/font_size = 12
 text = "[E] to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
