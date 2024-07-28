@@ -1,6 +1,5 @@
 extends Node2D
 
-
 func _ready():
 	$AnimationPlayer.play("RESET")
 	Dialogic.signal_event.connect(DialogicSignalEvent) #connects to dialogic signals
