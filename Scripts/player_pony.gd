@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player_Pony
+
 @export var WALK_SPEED: int = 50 # pixels per second
 @export var TROT_SPEED: int = 100 # pixels per second
 @export var GALLOP_SPEED: int = 150 # pixels per second
@@ -10,7 +12,6 @@ var run_direction = Vector2.DOWN
 @export var facing = "right" # (String, "up", "down", "left", "right")
 @onready var color = self.modulate.a
 @export var level = 0
-@export var gamesucces = false
 
 var anim = ""
 var new_anim = ""
@@ -23,6 +24,11 @@ var state = STATE_IDLE
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignalEvent)
+	var spawnpoints = get_tree().get_nodes_in_group("spawnpoints")
+	for spawnpoint in spawnpoints:
+		if spawnpoint.name == Globals.spawnpoint:
+			global_position = spawnpoint.global_position
+			break
 	
 	#connects to dialogic signals
 
@@ -183,8 +189,6 @@ func DialogicSignalEvent(argument:String):
 	if argument == "LevelUp":
 		level_up()
 		print(level)
-	if argument == "PotionComplete":
-		gamesucces = true
 	pass
 
 func level_up():
@@ -233,11 +237,8 @@ func _on_area_2d_body_entered(body):
 		pass
 
 
-func _on_spirit_gate_body_entered(body):
-	if gamesucces == false:
-		Dialogic.start("res://Dialogue/GateNOTReadytimeline.dtl")
-		return
-	if gamesucces == true:
-		Dialogic.start("res://Dialogue/GateReadytimeline.dtl")
+func _on_jump_collision_body_entered(body):
+	if state == STATE_JUMP:
+		goto_rear()
 	else:
-		pass # Replace with function body.
+		pass
