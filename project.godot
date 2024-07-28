@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 InteractionManager="*res://GameParts/interaction/InteractionManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Globals="*res://GameParts/SceneSwitching/Globals.gd"
 
 [dialogic]
 
@@ -33,11 +34,10 @@ directories/dtl_directory={
 "CantJump": "res://Dialogue/CantJump.dtl",
 "DaffodilReminder": "res://Dialogue/DaffodilReminder.dtl",
 "DaffodilStart": "res://Dialogue/DaffodilStart.dtl",
-"Dialogue/GateNOTReadytimeline": "res://Dialogue/GateNOTReadytimeline.dtl",
-"Dialogue/GateReadytimeline": "res://Dialogue/GateReadytimeline.dtl",
+"Dialogue/GateReadytimeline": "res://Dialogue/GateReady.dtl",
 "GameEnd": "res://Dialogue/GameEnd.dtl",
 "GameEndReRun": "res://Dialogue/GameEndReRun.dtl",
-"GateNOTReadytimeline": "res://Assets/FONT-bedstead/GateNOTReadytimeline.dtl",
+"GateNOTReadytimeline": "res://Dialogue/GateNotReady.dtl",
 "InitialDialogue": "res://Dialogue/InitialDialogue.dtl",
 "KittyExplain1": "res://Dialogue/KittyExplain1.dtl",
 "LotusReminder": "res://Dialogue/LotusReminder.dtl",
