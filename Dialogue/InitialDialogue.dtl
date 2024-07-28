@@ -1,11 +1,11 @@
 [style name="NewDefault"]
 [signal arg="DialogueStart"]
 PlayerPony: What??? Where .... am....  I???
-PlaceholderMysteryCharacter: ???!!!!!!!!
+PlaceholderMysteryCharacter: ??!!
 PlaceholderMysteryCharacter: What happened to my potion?!
-PlaceholderMysteryCharacter: This is going to take forever to redo! 
+PlaceholderMysteryCharacter: This is going to take forever to redo!
 PlayerPony: potion??
-PlayerPony: I hope this has nothing to do with that pot that I found eariler.... 
+PlayerPony: I hope this has nothing to do with that pot that I found eariler....
 PlaceholderMysteryCharacter: Oi!  You there, new spirit!
 - Spirit? You don't mean me do you?
 	PlaceholderMysteryCharacter: Nah, Im talking to the other etheral being near me...
@@ -14,4 +14,5 @@ PlaceholderMysteryCharacter: Oi!  You there, new spirit!
 	PlaceholderMysteryCharacter: Come over here, to the water's center so we can talk face to face.
 ~~ Move around with WASD or the arrow keys ~~
 ~~ Go find the source of the voice! Get there quickly by pressing SHIFT ~~
+[signal arg="InitalDialogueEnd"]
 [signal arg="DialogueEnd"]
