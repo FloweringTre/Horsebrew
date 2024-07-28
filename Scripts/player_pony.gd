@@ -10,10 +10,10 @@ var run_direction = Vector2.DOWN
 @export var facing = "right" # (String, "up", "down", "left", "right")
 @onready var color = self.modulate.a
 @export var level = 0
+@export var gamesucces = false
 
 var anim = ""
 var new_anim = ""
-
 
 enum { STATE_BLOCKED, STATE_IDLE, STATE_WALKING, STATE_TROT, STATE_RUN, STATE_JUMP, STATE_REAR }
 
@@ -23,7 +23,6 @@ var state = STATE_IDLE
 
 func _ready():
 	Dialogic.signal_event.connect(DialogicSignalEvent)
-	
 	
 	#connects to dialogic signals
 
@@ -184,6 +183,8 @@ func DialogicSignalEvent(argument:String):
 	if argument == "LevelUp":
 		level_up()
 		print(level)
+	if argument == "PotionComplete":
+		gamesucces = true
 	pass
 
 func level_up():
@@ -230,3 +231,13 @@ func _on_area_2d_body_entered(body):
 		goto_rear()
 	else:
 		pass
+
+
+func _on_spirit_gate_body_entered(body):
+	if gamesucces == false:
+		Dialogic.start("res://Dialogue/GateNOTReadytimeline.dtl")
+		return
+	if gamesucces == true:
+		Dialogic.start("res://Dialogue/GateReadytimeline.dtl")
+	else:
+		pass # Replace with function body.
