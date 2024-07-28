@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dluoam0a4d4q"]
+
+[ext_resource type="Script" path="res://SpirtGateCollection.gd" id="1_jsngw"]
+[ext_resource type="PackedScene" uid="uid://ckg4sstyb5cid" path="res://GameParts/Items/tall_gate_post.tscn" id="2_b7xvd"]
+[ext_resource type="PackedScene" uid="uid://dyinvm3nhgtym" path="res://GameParts/Items/short_gate_post.tscn" id="3_v4v8p"]
+[ext_resource type="PackedScene" uid="uid://841uri4utqum" path="res://GameParts/interaction/interaction_area.tscn" id="4_kp18a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dn8p7"]
+size = Vector2(253, 85.3915)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a17k2"]
+radius = 62.1495
+height = 363.452
+
+[node name="SpirtGateCollection" type="Node2D"]
+position = Vector2(127, -49)
+script = ExtResource("1_jsngw")
+
+[node name="TallGatePost" parent="." instance=ExtResource("2_b7xvd")]
+z_index = 4
+position = Vector2(-79, -9)
+
+[node name="TallGatePost2" parent="." instance=ExtResource("2_b7xvd")]
+z_index = 10
+position = Vector2(-263, 90)
+
+[node name="ShortGatePost" parent="." instance=ExtResource("3_v4v8p")]
+z_index = 4
+position = Vector2(-19, 25)
+
+[node name="ShortGatePost2" parent="." instance=ExtResource("3_v4v8p")]
+z_index = 10
+position = Vector2(-196, 116)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-175, 51)
+rotation = -0.523278
+shape = SubResource("RectangleShape2D_dn8p7")
+
+[node name="InteractionArea" parent="." instance=ExtResource("4_kp18a")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-129, 88)
+rotation = -2.07177
+shape = SubResource("CapsuleShape2D_a17k2")
+debug_color = Color(0.690262, 0.496455, 0.0978777, 0.42)
