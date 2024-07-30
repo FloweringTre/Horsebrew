@@ -2970,7 +2970,6 @@ _data = {
 [node name="player_pony" type="CharacterBody2D" groups=["player"]]
 collision_layer = 7
 script = ExtResource("1_m5sog")
-level = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_fka7p")
