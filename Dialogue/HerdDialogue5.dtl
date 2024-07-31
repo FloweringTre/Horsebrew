@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC3: Hello!!
+HorseNPC3: Did you know the cat asset was made by girlypixels on itch.io?
+PlayerPony: No, I will totally check them out!
+[signal arg="DialogueEnd"]

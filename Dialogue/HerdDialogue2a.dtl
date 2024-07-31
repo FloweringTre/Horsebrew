@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC2: Hey!! Back again?
+PlayerPony: Yes, I enjoy your company.
+HorseNPC2: Awwww.... I enjoy your company too. 
+[signal arg="DialogueEnd"]

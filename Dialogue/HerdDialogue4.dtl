@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC3: Hello!!
+HorseNPC3: Did you know the horse assets were made by Onfe on itch.io?
+PlayerPony: No but that is amazing!!
+[signal arg="DialogueEnd"]

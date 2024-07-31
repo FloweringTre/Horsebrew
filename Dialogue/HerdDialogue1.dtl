@@ -1,0 +1,10 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC: Hello!
+PlayerPony: I'm back, Kiwi!
+HorseNPC: You were gone?
+PlayerPony: I....
+PlayerPony: Yeah, I was just over on the other side of the clearing. It is nice to be back at your side.
+HorseNPC: It is very nice to be back with you too!
+[signal arg="SpotMain"]
+[signal arg="DialogueEnd"]

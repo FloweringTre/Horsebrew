@@ -1,0 +1,10 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC3: Hi there!
+HorseNPC3: Did you know this game was made for the July 2024 Pirate Software Game Jam on itch.io?
+PlayerPony: You mean the one about shadows and alchemy... are you sure?
+HorseNPC3: Yeah I think we nailed the alchemy part!
+PlayerPony: I was a shadow for the first bit... I guess we did a decent job at the theme!
+HorseNPC3: Yeah you should check out Pirate Software too!
+PlayerPony: I will go check them out right now!
+[signal arg="DialogueEnd"]

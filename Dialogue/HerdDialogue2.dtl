@@ -1,0 +1,9 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC2: Hey there Pony!
+PlayerPony: Hi Bruno! Did you miss me?
+HorseNPC2: Were you gone? Was it somewhere cool?
+PlayerPony: It was... it was a good experience.
+HorseNPC2: I'm glad, it is always nice to have good experiences. 
+[signal arg="BrunoMain"]
+[signal arg="DialogueEnd"]

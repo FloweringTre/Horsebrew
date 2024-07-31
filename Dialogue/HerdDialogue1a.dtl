@@ -1,0 +1,7 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC: Hello again Pony!
+PlayerPony: Hi Kiwi!
+HorseNPC: It is a nice day here.
+PlayerPony: Yes... it is wonderful to be here.
+[signal arg="DialogueEnd"]

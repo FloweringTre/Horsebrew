@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC3: Hello there
+HorseNPC3: Did you know the music was made by Helton Yan on itch.io?
+PlayerPony: I love the vibes, I will totally check out their stuff more!
+[signal arg="DialogueEnd"]

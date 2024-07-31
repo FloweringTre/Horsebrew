@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC3: Hello hello...
+HorseNPC3: Did you know this game was made by kyraltre?
+PlayerPony: You mean tre? Thats so cool!
+[signal arg="DialogueEnd"]

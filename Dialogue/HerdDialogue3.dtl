@@ -1,0 +1,6 @@
+[signal arg="DialogueStart"]
+[style name="NewDefault"]
+HorseNPC3: Hi!
+HorseNPC3: Did you know the background assets were done by RafaelMatos on itch.io?
+PlayerPony: No but that is really cool, I will check them out!
+[signal arg="DialogueEnd"]
