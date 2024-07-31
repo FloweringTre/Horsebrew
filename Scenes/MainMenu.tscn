@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://dm7vpamo80mo6"]
 
-[ext_resource type="Texture2D" uid="uid://du8c8wf165jd6" path="res://Assets/ZZ-SelfMade/Capture.PNG" id="1_0xd72"]
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_ib3pp"]
 [ext_resource type="Texture2D" uid="uid://dyyqigeusgdgq" path="res://Assets/ZZ-SelfMade/logo.png" id="2_mhy2g"]
+[ext_resource type="Texture2D" uid="uid://df7odvvmwqok8" path="res://Assets/ZZ-SelfMade/Capture1.PNG" id="3_g60ot"]
 [ext_resource type="FontFile" uid="uid://bqy1u2714a64q" path="res://Assets/FONT-bedstead/bedstead.otf" id="3_puktc"]
 [ext_resource type="PackedScene" uid="uid://btwukfe50t1p0" path="res://GameParts/Items/potion_pot.tscn" id="4_rgrja"]
 [ext_resource type="Texture2D" uid="uid://crsqxvgwejctu" path="res://Assets/HorseAssets/Horses_no_equipment/Horse_socks_black.png" id="6_2elrv"]
@@ -485,6 +485,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -5.0
+offset_right = -26.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ib3pp")
@@ -492,40 +496,37 @@ script = ExtResource("1_ib3pp")
 [node name="BG" type="TextureRect" parent="."]
 z_index = -5
 layout_mode = 0
-offset_left = -316.0
-offset_top = -18.0
-offset_right = 801.0
-offset_bottom = 506.0
-texture = ExtResource("1_0xd72")
-metadata/_edit_lock_ = true
+offset_left = -108.0
+offset_top = -21.0
+offset_right = 833.0
+offset_bottom = 538.0
+texture = ExtResource("3_g60ot")
 
 [node name="Logo" type="TextureRect" parent="."]
-modulate = Color(0.63, 0.63, 0.63, 1)
+modulate = Color(0.698282, 0.543094, 0.902737, 1)
 layout_mode = 0
-offset_left = 108.0
-offset_top = 17.0
-offset_right = 449.0
-offset_bottom = 99.0
+offset_left = 106.0
+offset_top = 40.0
+offset_right = 447.0
+offset_bottom = 122.0
 texture = ExtResource("2_mhy2g")
-metadata/_edit_lock_ = true
 
 [node name="Logo2" type="TextureRect" parent="."]
 modulate = Color(0.180392, 0.180392, 0.180392, 0.415686)
 z_index = -1
 layout_mode = 0
-offset_left = 105.0
-offset_top = 22.0
-offset_right = 447.0
-offset_bottom = 103.0
+offset_left = 103.0
+offset_top = 45.0
+offset_right = 445.0
+offset_bottom = 126.0
 texture = ExtResource("2_mhy2g")
-metadata/_edit_lock_ = true
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 231.0
-offset_top = 243.0
-offset_right = 311.0
-offset_bottom = 281.0
+offset_left = 230.0
+offset_top = 263.0
+offset_right = 310.0
+offset_bottom = 301.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.0106611, 0.144042, 0.0543578, 1)
 theme_override_colors/font_hover_color = Color(0.0669178, 0.395289, 0.190521, 1)
@@ -540,14 +541,13 @@ theme_override_fonts/font = ExtResource("3_puktc")
 theme_override_font_sizes/font_size = 30
 text = "Play"
 flat = true
-metadata/_edit_lock_ = true
 
 [node name="Exit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 239.0
-offset_top = 280.0
-offset_right = 295.0
-offset_bottom = 309.0
+offset_left = 242.0
+offset_top = 300.0
+offset_right = 298.0
+offset_bottom = 329.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.0117647, 0.145098, 0.054902, 1)
 theme_override_colors/font_hover_color = Color(0.0666667, 0.396078, 0.192157, 1)
@@ -556,11 +556,13 @@ theme_override_font_sizes/font_size = 20
 text = "Exit
 "
 flat = true
-metadata/_edit_lock_ = true
 
 [node name="PotionPot" parent="." instance=ExtResource("4_rgrja")]
 position = Vector2(270, 184)
 metadata/_edit_lock_ = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PotionPot"]
+remote_path = NodePath("../../Camera2D")
 
 [node name="HorseSprite" type="Sprite2D" parent="."]
 position = Vector2(611, 181)
@@ -595,6 +597,9 @@ position = Vector2(260, 193.5)
 texture = ExtResource("10_eprpe")
 hframes = 7
 frame = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(270, 184)
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
