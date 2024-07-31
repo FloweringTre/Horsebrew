@@ -1,0 +1,61 @@
+[gd_scene load_steps=18 format=3 uid="uid://drm5y6x8j2pqu"]
+
+[ext_resource type="Script" path="res://BGAudio.gd" id="1_uyian"]
+[ext_resource type="AudioStream" uid="uid://dsuru36k57buc" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Pulsating Harmonics_HY_Trnqlty.wav" id="2_eexpq"]
+[ext_resource type="AudioStream" uid="uid://6wvkp4dcr48l" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Pulsating Rich Harmonics_HY_Trnqlty.wav" id="3_7jgek"]
+[ext_resource type="AudioStream" uid="uid://43d7u64rtmcn" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Wooden Strums_HY_Trnqlty.wav" id="4_03vht"]
+[ext_resource type="AudioStream" uid="uid://bg6ho7wcjjviv" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Minor-Airy Swell_HY_Trnqlty.wav" id="5_nm3ke"]
+[ext_resource type="AudioStream" uid="uid://qdgntefsmkmc" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Minor-Assorted Instruments_HY_Trnqlty.wav" id="6_3rfa0"]
+[ext_resource type="AudioStream" uid="uid://dils3hdnjwn8" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Minor-Bell Echoes_HY_Trnqlty.wav" id="7_1wfen"]
+[ext_resource type="AudioStream" uid="uid://cj4mbylg7bgux" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Minor-Chromatic Bells_HY_Trnqlty.wav" id="8_w8uea"]
+[ext_resource type="AudioStream" uid="uid://c54fg30mulx5m" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Pulsation_HY_Trnqlty.wav" id="14_no6xc"]
+[ext_resource type="AudioStream" uid="uid://cbnrjl2bt0l54" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Short Hover_HY_Trnqlty.wav" id="25_mpwhu"]
+[ext_resource type="AudioStream" uid="uid://d21c5kjnbt7hc" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Small Strums_HY_Trnqlty.wav" id="36_5xykp"]
+[ext_resource type="AudioStream" uid="uid://b665cob0gplj1" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-String Swells_HY_Trnqlty.wav" id="42_elq5u"]
+[ext_resource type="AudioStream" uid="uid://cvx0tqoukbggh" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Strings and Bells_HY_Trnqlty.wav" id="43_u1t1u"]
+[ext_resource type="AudioStream" uid="uid://b0isdco5g0o1q" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Subtle Bliss_HY_Trnqlty.wav" id="44_vqxqt"]
+[ext_resource type="AudioStream" uid="uid://c5ck8diuly4vl" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Trickling Swell_HY_Trnqlty.wav" id="45_cl5mu"]
+[ext_resource type="AudioStream" uid="uid://cq7qcftjmvjgw" path="res://Assets/Helton Yan's Tranquility Part 1/MUSCMisc_Major-Violin Swells_HY_Trnqlty.wav" id="46_6so0k"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yi6sc"]
+streams_count = 15
+stream_0/stream = ExtResource("2_eexpq")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("3_7jgek")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("14_no6xc")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("25_mpwhu")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("36_5xykp")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("42_elq5u")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("43_u1t1u")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("44_vqxqt")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("45_cl5mu")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("46_6so0k")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("4_03vht")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("5_nm3ke")
+stream_11/weight = 1.0
+stream_12/stream = ExtResource("6_3rfa0")
+stream_12/weight = 1.0
+stream_13/stream = ExtResource("7_1wfen")
+stream_13/weight = 1.0
+stream_14/stream = ExtResource("8_w8uea")
+stream_14/weight = 1.0
+
+[node name="BGAudio" type="Node"]
+script = ExtResource("1_uyian")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_yi6sc")
+volume_db = -9.028
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
