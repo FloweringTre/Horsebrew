@@ -11,7 +11,7 @@ var run_direction = Vector2.DOWN
 
 @export var facing = "right" # (String, "up", "down", "left", "right")
 @onready var color = self.modulate.a
-@export var level = 0
+var level = Globals.horse_level
 
 var anim = ""
 var new_anim = ""
@@ -230,14 +230,14 @@ func _update_facing():
 	if Input.is_action_pressed("right") && Input.is_action_pressed("down"):
 		facing = "right"
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	if state == STATE_JUMP:
 		goto_rear()
 	else:
 		pass
 
 
-func _on_jump_collision_body_entered(body):
+func _on_jump_collision_body_entered(_body):
 	if state == STATE_JUMP:
 		goto_rear()
 	else:
