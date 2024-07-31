@@ -20,10 +20,14 @@ config/icon="res://icon.svg"
 InteractionManager="*res://GameParts/interaction/InteractionManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Globals="*res://GameParts/SceneSwitching/Globals.gd"
+BgAudio="*res://GameParts/BGAudio.tscn"
 
 [dialogic]
 
 directories/dch_directory={
+"HorseNPC": "res://Dialogue/HorseNPC.dch",
+"HorseNPC2": "res://Dialogue/HorseNPC2.dch",
+"HorseNPC3": "res://Dialogue/HorseNPC3.dch",
 "PlaceholderMysteryCharacter": "res://Dialogue/PlaceholderMysteryCharacter.dch",
 "PlayerPony": "res://Dialogue/PlayerPony.dch",
 "WitchKitty": "res://Dialogue/WitchKitty.dch"
@@ -38,6 +42,16 @@ directories/dtl_directory={
 "GameEnd": "res://Dialogue/GameEnd.dtl",
 "GameEndReRun": "res://Dialogue/GameEndReRun.dtl",
 "GateNOTReadytimeline": "res://Dialogue/GateNotReady.dtl",
+"HerdDialogue1": "res://Dialogue/HerdDialogue1.dtl",
+"HerdDialogue1a": "res://Dialogue/HerdDialogue1a.dtl",
+"HerdDialogue2": "res://Dialogue/HerdDialogue2.dtl",
+"HerdDialogue2a": "res://Dialogue/HerdDialogue2a.dtl",
+"HerdDialogue3": "res://Dialogue/HerdDialogue3.dtl",
+"HerdDialogue4": "res://Dialogue/HerdDialogue4.dtl",
+"HerdDialogue5": "res://Dialogue/HerdDialogue5.dtl",
+"HerdDialogue6": "res://Dialogue/HerdDialogue6.dtl",
+"HerdDialogue7": "res://Dialogue/HerdDialogue7.dtl",
+"HerdDialogue8": "res://Dialogue/HerdDialogue8.dtl",
 "InitialDialogue": "res://Dialogue/InitialDialogue.dtl",
 "KittyExplain1": "res://Dialogue/KittyExplain1.dtl",
 "LotusReminder": "res://Dialogue/LotusReminder.dtl",
@@ -67,7 +81,7 @@ save/encryption_on_exports_only=true
 save/autosave=true
 text/autopauses={}
 glossary/default_case_sensitive=true
-layout/style_list=["res://Dialogue/Style1.tres", "res://Assets/FONT-bedstead/smoltextbox.tres"]
+layout/style_list=["res://Dialogue/Style1.tres"]
 layout/default_style="res://Dialogue/Style1.tres"
 variables={}
 choices/hotkey_behaviour=1
